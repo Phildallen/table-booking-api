@@ -15,7 +15,13 @@ const getSiteByName = async (siteName) => {
     return await sitesRepository.getSiteByName(siteName)
 }
 
+const addSite = async (newSite) => {
+    console.log('Service: addSite')
+    // validation here
+    return await sitesRepository.addSite(newSite)
+}
 
 module.exports.getSites = getSites
 module.exports.getSite = getSite
 module.exports.getSiteByName = getSiteByName
+module.exports.addSite = addSite

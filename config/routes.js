@@ -3,8 +3,9 @@ const sitesController = require('../controllers/sitesController')
 const routes = (app) => {
 
     app.get('/sites', sitesController.getSites)
-    app.get('/site/:siteId', sitesController.getSite)
-    app.get('/siteName/:siteName', sitesController.getSiteByName)
+    app.get('/sites/:siteId', sitesController.getSite)
+    app.get('/sites/name/:siteName', sitesController.getSiteByName)
+    app.post('/sites', sitesController.addSite)
 
     app.get('/midware1', (req,res, next) => {
         console.log('Hello from routes middleware')
