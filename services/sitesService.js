@@ -1,9 +1,21 @@
-const sitesRepository = require('../repositories/sitesRepositorie')
+const sitesRepository = require('../repositories/sitesRepository')
 
 const getSites = async () => {
     console.log('Service: getSites')
     return await sitesRepository.getSites()
 }
 
+const getSite = async (siteId) => {
+    console.log('Service: getSite')
+    return await sitesRepository.getSite(siteId)
+}
+
+const getSiteByName = async (siteName) => {
+    console.log('Service: getSiteByName')
+    return await sitesRepository.getSiteByName(siteName)
+}
+
 
 module.exports.getSites = getSites
+module.exports.getSite = getSite
+module.exports.getSiteByName = getSiteByName

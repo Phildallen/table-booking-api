@@ -6,7 +6,7 @@ const app = express()
 const port = 3001
 
 //Middleware to execute every time the app receives a request
-// app.use(loggerMiddleware)
+app.use(loggerMiddleware)
 //if the content type of the request is JSON, parse it and put it in
 //the property req.body
 app.use(express.json())
