@@ -22,7 +22,13 @@ const addSite = async (newSite) => {
     return await sitesRepository.addSite(newSite)
 }
 
+const amendSite = async (siteId,amendedDetails) => {
+    console.log('Service: amendSite')
+    return await sitesRepository.amendSite(siteId,amendedDetails)
+}
+
 module.exports.getSites = getSites
 module.exports.getSite = getSite
 module.exports.getSiteByName = getSiteByName
 module.exports.addSite = addSite
+module.exports.amendSite = amendSite

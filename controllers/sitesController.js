@@ -22,8 +22,16 @@ const addSite = (req, res) => {
     sitesService.addSite(newSite).then((result) => res.json(result))
 }
 
+const amendSite = (req, res) => {
+    console.log('Controller: amendSite')
+    const amendedDetails = req.body.site
+    console.log(amendedDetails)
+    sitesService.amendSite(req.params.siteId,amendedDetails).then((result) => res.send(result))
+}
+
 
 module.exports.getSites = getSites
 module.exports.getSite = getSite
 module.exports.getSiteByName = getSiteByName
 module.exports.addSite = addSite
+module.exports.amendSite = amendSite

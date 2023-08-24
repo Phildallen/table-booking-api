@@ -25,7 +25,16 @@ const addSite = async (newSite) => {
     return await sitesCollection.insertOne(newSite)
 }
 
+const amendSite = async (siteId,amendedDetails) => {
+    console.log('Repository: amendSite')
+    let id = parseFloat(siteId)
+    console.log(id)
+    // console.log(amendedDetails)
+    return await sitesCollection.updateOne({"siteId":id},{$set:amendedDetails})
+}
+
 module.exports.getSites = getSites
 module.exports.getSite = getSite
 module.exports.getSiteByName = getSiteByName
 module.exports.addSite = addSite
+module.exports.amendSite = amendSite

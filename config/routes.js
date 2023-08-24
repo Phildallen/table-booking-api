@@ -6,6 +6,7 @@ const routes = (app) => {
     app.get('/sites/:siteId', sitesController.getSite)
     app.get('/sites/name/:siteName', sitesController.getSiteByName)
     app.post('/sites', sitesController.addSite)
+    app.put('/sites/:siteId', sitesController.amendSite)
 
     app.get('/midware1', (req,res, next) => {
         console.log('Hello from routes middleware')
