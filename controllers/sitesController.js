@@ -18,6 +18,7 @@ const getSiteByName = (req, res , siteName) => {
 const addSite = (req, res) => {
     console.log('Controller: addSite')
     const newSite = req.body.site
+    console.log(newSite)
     sitesService.addSite(newSite).then((result) => res.json(result))
 }
 

@@ -17,6 +17,7 @@ const getSiteByName = async (siteName) => {
 
 const addSite = async (newSite) => {
     console.log('Service: addSite')
+    console.log(newSite)
     // validation here
     return await sitesRepository.addSite(newSite)
 }

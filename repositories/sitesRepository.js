@@ -22,8 +22,7 @@ const getSiteByName = async (siteName) => {
 const addSite = async (newSite) => {
     console.log('Repository: addSite')
     console.log(newSite)
-    // let bodyJson = JSON.parse(newSite)
-    // return await sitesCollection.insertOne(newSite)
+    return await sitesCollection.insertOne(newSite)
 }
 
 module.exports.getSites = getSites
