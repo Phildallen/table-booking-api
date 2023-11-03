@@ -5,6 +5,9 @@ const loggerMiddleware = require('./logger/LoggerMiddleware')
 const app = express()
 const port = 3001
 
+const cors = require('cors');
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+
 //Middleware to execute every time the app receives a request
 app.use(loggerMiddleware)
 //if the content type of the request is JSON, parse it and put it in
